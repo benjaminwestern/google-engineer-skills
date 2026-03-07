@@ -68,6 +68,7 @@ All skills require [Node.js](https://nodejs.org/) as the runtime for the `npx sk
 | 🎭 **[playwright-cli](skills/playwright-cli/SKILL.md)** | Automates browser interactions for comprehensive web testing and data extraction. It enables robust UI verification, form manipulation, and screenshot capture. | `@playwright/cli` | [Playwright](https://playwright.dev) |
 | ⚙️ **[opencode-dev](skills/opencode-dev/SKILL.md)** | Manages OpenCode agents, tools, MCP servers, and comprehensive workflows. It handles the configuration management required for advanced OpenCode development. | `opencode-ai` | [OpenCode](https://opencode.ai) |
 | 🎬 **[charm-vhs](skills/charm-vhs/SKILL.md)** | Writes and edits VHS `.tape` files for creating terminal demo GIFs and videos. Enables automated recording of terminal sessions with precise timing and styling. | [VHS](https://github.com/charmbracelet/vhs), [Go](https://go.dev/) | [VHS](https://github.com/charmbracelet/vhs) |
+| 🖥️ **[terminal-ui-engineer](skills/terminal-ui-engineer/SKILL.md)** | Constructs beautiful, highly interactive Terminal UIs using Charmbracelet's Gum. It engineers bulletproof shell scripts with robust dependency management and modern UX aesthetics. | [Gum](https://github.com/charmbracelet/gum) | Internal |
 
 <br>
 

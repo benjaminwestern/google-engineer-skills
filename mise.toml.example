@@ -12,6 +12,9 @@ node = "latest"
 # VHS - for creating terminal demo recordings
 "go:github.com/charmbracelet/vhs" = { version = "latest" }
 
+# Gum - for creating beautiful terminal UIs
+"go:github.com/charmbracelet/gum" = { version = "latest" }
+
 # Terraform - for infrastructure as code
 terraform = "latest"
 
