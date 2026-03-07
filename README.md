@@ -29,7 +29,7 @@ Or you can install individual skills:
 npx skills add https://github.com/benjaminwestern/google-engineer-skills --skill tech-writer
 ```
 
-### Requirements
+<img src="assets/header-requirements.svg" alt="Requirements" />
 
 These skills require certain CLI tools to be installed on your system. The easiest way to manage these dependencies is using [mise](https://mise.jdx.dev/):
 
