@@ -29,6 +29,15 @@ Or you can install individual skills:
 npx skills add https://github.com/benjaminwestern/google-engineer-skills --skill tech-writer
 ```
 
+### Managing Skills
+
+| Command | Description |
+|---------|-------------|
+| `npx skills check` | Check if there are updates available for installed skills |
+| `npx skills update` | Update all installed skills to the latest version |
+| `npx skills list` | List all installed skills |
+| `npx skills find <query>` | Query the skills directory for skills matching the query |
+
 <br>
 
 <img src="assets/header-arsenal.svg" alt="The Arsenal" />
@@ -84,9 +93,17 @@ metadata:
 
 <img src="assets/header-references.svg" alt="References" />
 
-This repository unifies our collective capabilities to expose them via simple interfaces. Additional context and methodologies can be found at [vercel-labs/skills](https://github.com/vercel-labs/skills).
+This repository unifies our collective capabilities to expose them via simple interfaces.
 
-You may also leverage these supplementary skill registries to expand your agent's toolkit:
+### Skills Standard
+
+- [agentskills.io](https://agentskills.io/home) — Official skill definitions and documentation
+- [agentskills/agentskills](https://github.com/agentskills/agentskills) — Source repository for skill specifications
+- [vercel-labs/skills](https://github.com/vercel-labs/skills) — CLI registry and installing package (`npx skills`)
+
+### Other Skill Registries
+
+Expand your agent's toolkit with these supplementary skill collections:
 - 📦 `npx skills add https://github.com/google-gemini/gemini-skills`
 - ⚛️ `npx skills add https://github.com/google-labs-code/stitch-skills --skill react:components`
 - 🛠️ `npx skills add https://github.com/google-gemini/gemini-cli`
