@@ -1,0 +1,11 @@
+<svg width="800" height="70" viewBox="0 0 800 70" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+      .header { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 24px; fill: #1e1e2e; text-transform: uppercase; letter-spacing: 2px; }
+    ]]></style>
+  </defs>
+  <!-- Bento Card for Header -->
+  <rect x="0" y="10" width="580" height="50" rx="16" fill="#89b4fa" />
+  <text x="30" y="44" class="header">Skills</text>
+</svg>

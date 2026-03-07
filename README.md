@@ -1,26 +1,63 @@
-# google-engineer-skills
+<div align="center">
+  <img src="assets/banner.svg" alt="Google Engineer Skills Banner" />
+</div>
 
-List of skills useful for a Google Cloud Engineer made with love by @benjaminwestern and @emilehofsink
+<br>
 
-## Skills
+<img src="assets/header-overview.svg" alt="Overview" />
+
+This repository centralises high-leverage AI agent skills and tooling for Google Cloud Engineers, accelerating infrastructure delivery and ensuring architectural rigour. By establishing a unified collection of modular, production-tested agent capabilities, engineering teams can eliminate repetitive tasks, enforce security compliance, and standardise deployment practices.
+
+The value proposition is built upon three foundational pillars:
+- 🚀 **Immediate Velocity** — Engineers can bypass the scaffolding phase by leveraging pre-built, domain-specific agent skills that instantly hook into standard workflows. This reduces time-to-market for complex infrastructural deployments.
+- 🛡️ **Enforced Standardisation** — Curated skills ensure that code generation, Terraform modules, and architectural designs adhere strictly to Google Cloud best practices. This minimises the risk of misconfigurations and security vulnerabilities.
+- 🧩 **Extensible Ecosystem** — The repository serves as a scalable foundation where new capabilities can be seamlessly integrated and distributed. This prevents silos and empowers cross-functional teams to share high-quality technical assets.
+
+<br>
+
+<img src="assets/header-quickstart.svg" alt="Quick Start" />
+
+To begin using these tools immediately, add the required skills to your local environment using the CLI. You can pull them down in seconds and start extending your agent's capabilities.
+
+```bash
+# Add all skills from this repository
+npx skills add https://github.com/benjaminwestern/google-engineer-skills
+```
+
+Or you can install individual skills:
+```bash
+npx skills add https://github.com/benjaminwestern/google-engineer-skills --skill tech-writer
+```
+
+<br>
+
+<img src="assets/header-arsenal.svg" alt="The Arsenal" />
 
 | Skill | Description | Source |
 |-------|-------------|--------|
-| [d2-diagram](skills/d2-diagram/SKILL.md) | Create professional diagrams using D2 declarative diagramming language. Supports sequence diagrams, flowcharts, architecture diagrams, ERDs, UML class diagrams, and grid-based diagrams. | [D2](https://d2lang.com) |
-| [google-adk](skills/google-adk/SKILL.md) | Build AI agents with Google's Agent Development Kit (ADK) in Python, Go, Java, and TypeScript. Includes authentication patterns, agent types, tools, state management, and deployment guides. | [ADK](https://google.github.io/adk-docs/) |
-| [terraform](skills/terraform/SKILL.md) | Create and manage infrastructure with Terraform. Covers modules, testing, CI/CD pipelines, security compliance, and infrastructure-as-code best practices. | [Terraform](https://developer.hashicorp.com/terraform/docs) |
-| [skill-crawler](skills/skill-crawler/SKILL.md) | Convert crawled documentation into opencode skills. Works with playwright-cli to generate SKILL.md files from extracted documentation. | Internal |
-| [cloud-foundation-fabric](skills/cloud-foundation-fabric/SKILL.md) | Build Google Cloud resources using Cloud Foundation Fabric Terraform modules. Production-ready modules for GCP infrastructure with proper versioning. | [CFF](https://github.com/GoogleCloudPlatform/cloud-foundation-fabric) |
-| [playwright-cli](skills/playwright-cli/SKILL.md) | Automate browser interactions for web testing, form filling, screenshots, and data extraction. Browser automation and content extraction. | [Playwright](https://playwright.dev) |
-| [opencode-dev](skills/opencode-dev/SKILL.md) | Create and manage OpenCode agents, tools, MCP servers, prompts, and workflows. Configuration management for OpenCode development. | [OpenCode](https://opencode.ai) |
+| ✍️ **[tech-writer](skills/tech-writer/SKILL.md)** | Produces rigorous, persuasive technical documentation and solution designs. It enforces British English, the Pyramid Principle, and visual markdown generation for high-impact communication. | Internal |
+| 🎨 **[github-profile-architect](skills/github-profile-architect/SKILL.md)** | Constructs breathtaking, highly personalised digital magazines and documentation layouts. It leverages dynamic SVGs, Bento Box aesthetics, and strict colour palettes. | Internal |
+| ☁️ **[cloud-foundation-fabric](skills/cloud-foundation-fabric/SKILL.md)** | Builds Google Cloud resources using Cloud Foundation Fabric Terraform modules. It provides production-ready modules for GCP infrastructure with proper versioning constraints. | [CFF](https://github.com/GoogleCloudPlatform/cloud-foundation-fabric) |
+| 🤖 **[google-adk](skills/google-adk/SKILL.md)** | Constructs AI agents using Google's Agent Development Kit (ADK) across multiple languages. It includes authentication patterns, agent types, and state management guides. | [ADK](https://google.github.io/adk-docs/) |
+| 🏗️ **[terraform](skills/terraform/SKILL.md)** | Creates and manages scalable infrastructure through code. It covers modules, testing paradigms, CI/CD pipelines, and infrastructure-as-code security compliance. | [Terraform](https://developer.hashicorp.com/terraform/docs) |
+| 📊 **[d2-diagram](skills/d2-diagram/SKILL.md)** | Generates professional architectural diagrams using the D2 declarative language. It supports sequence diagrams, flowcharts, ERDs, and UML class diagrams. | [D2](https://d2lang.com) |
+| 🕷️ **[skill-crawler](skills/skill-crawler/SKILL.md)** | Converts crawled external documentation directly into usable opencode skills. It works alongside playwright-cli to generate SKILL.md files from extracted web content. | Internal |
+| 🎭 **[playwright-cli](skills/playwright-cli/SKILL.md)** | Automates browser interactions for comprehensive web testing and data extraction. It enables robust UI verification, form manipulation, and screenshot capture. | [Playwright](https://playwright.dev) |
+| ⚙️ **[opencode-dev](skills/opencode-dev/SKILL.md)** | Manages OpenCode agents, tools, MCP servers, and comprehensive workflows. It handles the configuration management required for advanced OpenCode development. | [OpenCode](https://opencode.ai) |
 
-## Standards
+<br>
 
-### File Structure
+<img src="assets/header-standards.svg" alt="Architecture & Standards" />
 
-Each skill follows a standardized directory structure:
+### Deep Modules, Simple Interfaces
 
-```
+We ruthlessly hide implementation chaos and present clean, intuitive boundaries. Every skill must expose a simple interface while managing significant internal complexity.
+
+### Standardised File Structure
+
+Each skill must adhere to a strict, predictable directory structure to ensure compatibility and ease of discovery.
+
+```text
 skills/
 ├── <skill-name>/
 │   ├── SKILL.md              # Main skill documentation (REQUIRED)
@@ -29,70 +66,33 @@ skills/
 │       └── ...
 ```
 
-### SKILL.md Requirements
+### The SKILL.md Contract
 
-Every SKILL.md file **MUST** include YAML frontmatter with the following mandatory fields:
-
-```yaml
----
-name: <skill-name>
-version: "1.0.0"
-description: Clear description of what this skill does.
----
-```
-
-#### Optional Metadata
-
-The `metadata` section is optional and should only be included if it adds genuine value. Keep it minimal to prevent context bloat:
+Every `SKILL.md` file must include specific YAML frontmatter. This ensures the parsing engine can properly categorise and index the capability.
 
 ```yaml
 ---
 name: <skill-name>
 version: "1.0.0"
-description: Clear description of what this skill does.
+description: Clear description of what this skill accomplishes.
 metadata:
-  source_url: https://github.com/...        # Source repository
-  docs_url: https://docs.example.com        # Official documentation
-  latest_version: v1.2.3                    # Current version (if relevant)
+  source_url: https://github.com/...        # Optional source repository
 ---
 ```
 
-**Important:** Do not create random key:values in metadata. Only use standardized fields that provide clear value to the AI's context.
+<br>
 
-### Reference File Standards
+<img src="assets/header-references.svg" alt="References" />
 
-Reference files in the `references/` directory should also include minimal frontmatter:
+This repository unifies our collective capabilities to expose them via simple interfaces. Additional context and methodologies can be found at [vercel-labs/skills](https://github.com/vercel-labs/skills).
 
-```yaml
----
-name: <reference-topic>
-version: "1.0.0"
-description: Brief description of this reference doc.
-metadata:
-  source_url: https://...   # If applicable
----
-```
+You may also leverage these supplementary skill registries to expand your agent's toolkit:
+- 📦 `npx skills add https://github.com/google-gemini/gemini-skills`
+- ⚛️ `npx skills add https://github.com/google-labs-code/stitch-skills --skill react:components`
+- 🛠️ `npx skills add https://github.com/google-gemini/gemini-cli`
+- 🏢 `npx skills add https://github.com/googleworkspace/cli`
 
-### Content Guidelines
-
-1. **Quick Start**: Every SKILL.md should have a "Quick Start" section with 3-5 most common commands
-2. **When to Use**: Include a "When to use me" section explaining use cases
-3. **Examples**: Provide practical, tested examples
-4. **References**: Link to reference docs for detailed information
-5. **Source Attribution**: Always include source URLs for external tools/libraries
-
-### Naming Conventions
-
-- **Skill names**: Use lowercase with hyphens (e.g., `docker-cli`, `gcp-deploy`)
-- **File names**: Use lowercase with hyphens for reference files (e.g., `quick-reference.md`)
-- **Version format**: Use semantic versioning in quotes (e.g., `"1.0.0"`)
-
-## References
-
-This repository is so that we can unify our collective powerful skills and expose them via skills. More information can be found at [vercel-labs/skills](https://github.com/vercel-labs/skills)
-
-Currently also leveraging these other skills:
-1. `npx skills add https://github.com/google-gemini/gemini-skills`
-2. `npx skills add https://github.com/google-labs-code/stitch-skills --skill react:components`
-3. `npx skills add https://github.com/google-gemini/gemini-cli`
-4. `npx skills add https://github.com/googleworkspace/cli`
+<br>
+<div align="center">
+  <sub>Built with rigorous precision by <b>@benjaminwestern</b> and <b>@emilehofsink</b>.</sub>
+</div>
