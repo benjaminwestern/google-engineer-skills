@@ -75,7 +75,7 @@ if __name__ == "__main__":
     create_section_header(
         "assets/header-requirements.svg", "Requirements", "#fab387"
     )  # Peach
-    create_section_header("assets/header-arsenal.svg", "Skills", "#89b4fa")  # Blue
+    create_section_header("assets/header-skills.svg", "Skills", "#89b4fa")  # Blue
     create_section_header(
         "assets/header-standards.svg", "Architecture &amp; Standards", "#f9e2af"
     )  # Yellow

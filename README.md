@@ -38,25 +38,10 @@ These skills require certain CLI tools to be installed on your system. The easie
 cp mise.toml.example mise.toml
 
 # Install all required tools
-mise install
+mise up
 ```
 
-**Required Tools Overview:**
-
-| Tool | Purpose | Used By |
-|------|---------|---------|
-| [Node.js](https://nodejs.org/) | Runtime for `npx skills` CLI | All skills |
-| [D2](https://d2lang.com/) | Declarative diagramming | d2-diagram |
-| [VHS](https://github.com/charmbracelet/vhs) | Terminal recording | charm-vhs |
-| [Terraform](https://www.terraform.io/) | Infrastructure as code | terraform, cloud-foundation-fabric |
-| [Python](https://www.python.org/) + [uv](https://docs.astral.sh/uv/) | Python runtime & package manager | google-adk |
-| [Go](https://go.dev/) | Go runtime for CLI tools | d2, vhs |
-
-**NPM Packages (installed via mise):**
-- `@google/gemini-cli` — Gemini CLI integration
-- `opencode-ai` — OpenCode development
-- `@playwright/cli` — Browser automation
-- `@googleworkspace/cli` — Google Workspace integration
+All skills require [Node.js](https://nodejs.org/) as the runtime for the `npx skills` CLI. Additional global NPM packages like `@google/gemini-cli`, `opencode-ai`, `@playwright/cli`, or `@googleworkspace/cli` may be required by specific skills and are managed automatically via `mise`.
 
 ### Managing Skills
 
@@ -69,20 +54,20 @@ mise install
 
 <br>
 
-<img src="assets/header-arsenal.svg" alt="The Arsenal" />
+<img src="assets/header-skills.svg" alt="The Skills" />
 
-| Skill | Description | Source |
-|-------|-------------|--------|
-| ✍️ **[tech-writer](skills/tech-writer/SKILL.md)** | Produces rigorous, persuasive technical documentation and solution designs. It enforces British English, the Pyramid Principle, and visual markdown generation for high-impact communication. | Internal |
-| 🎨 **[github-profile-architect](skills/github-profile-architect/SKILL.md)** | Constructs breathtaking, highly personalised digital magazines and documentation layouts. It leverages dynamic SVGs, Bento Box aesthetics, and strict colour palettes. | Internal |
-| ☁️ **[cloud-foundation-fabric](skills/cloud-foundation-fabric/SKILL.md)** | Builds Google Cloud resources using Cloud Foundation Fabric Terraform modules. It provides production-ready modules for GCP infrastructure with proper versioning constraints. | [CFF](https://github.com/GoogleCloudPlatform/cloud-foundation-fabric) |
-| 🤖 **[google-adk](skills/google-adk/SKILL.md)** | Constructs AI agents using Google's Agent Development Kit (ADK) across multiple languages. It includes authentication patterns, agent types, and state management guides. | [ADK](https://google.github.io/adk-docs/) |
-| 🏗️ **[terraform](skills/terraform/SKILL.md)** | Creates and manages scalable infrastructure through code. It covers modules, testing paradigms, CI/CD pipelines, and infrastructure-as-code security compliance. | [Terraform](https://developer.hashicorp.com/terraform/docs) |
-| 📊 **[d2-diagram](skills/d2-diagram/SKILL.md)** | Generates professional architectural diagrams using the D2 declarative language. It supports sequence diagrams, flowcharts, ERDs, and UML class diagrams. | [D2](https://d2lang.com) |
-| 🕷️ **[skill-crawler](skills/skill-crawler/SKILL.md)** | Converts crawled external documentation directly into usable opencode skills. It works alongside playwright-cli to generate SKILL.md files from extracted web content. | Internal |
-| 🎭 **[playwright-cli](skills/playwright-cli/SKILL.md)** | Automates browser interactions for comprehensive web testing and data extraction. It enables robust UI verification, form manipulation, and screenshot capture. | [Playwright](https://playwright.dev) |
-| ⚙️ **[opencode-dev](skills/opencode-dev/SKILL.md)** | Manages OpenCode agents, tools, MCP servers, and comprehensive workflows. It handles the configuration management required for advanced OpenCode development. | [OpenCode](https://opencode.ai) |
-| 🎬 **[charm-vhs](skills/charm-vhs/SKILL.md)** | Writes and edits VHS `.tape` files for creating terminal demo GIFs and videos. Enables automated recording of terminal sessions with precise timing and styling. | [VHS](https://github.com/charmbracelet/vhs) |
+| Skill | Description | Required Tools | Source |
+|-------|-------------|----------------|--------|
+| ✍️ **[tech-writer](skills/tech-writer/SKILL.md)** | Produces rigorous, persuasive technical documentation and solution designs. It enforces British English, the Pyramid Principle, and visual markdown generation for high-impact communication. | - | Internal |
+| 🎨 **[github-profile-architect](skills/github-profile-architect/SKILL.md)** | Constructs breathtaking, highly personalised digital magazines and documentation layouts. It leverages dynamic SVGs, Bento Box aesthetics, and strict colour palettes. | - | Internal |
+| ☁️ **[cloud-foundation-fabric](skills/cloud-foundation-fabric/SKILL.md)** | Builds Google Cloud resources using Cloud Foundation Fabric Terraform modules. It provides production-ready modules for GCP infrastructure with proper versioning constraints. | [Terraform](https://www.terraform.io/) | [CFF](https://github.com/GoogleCloudPlatform/cloud-foundation-fabric) |
+| 🤖 **[google-adk](skills/google-adk/SKILL.md)** | Constructs AI agents using Google's Agent Development Kit (ADK) across multiple languages. It includes authentication patterns, agent types, and state management guides. | [Python](https://www.python.org/), [uv](https://docs.astral.sh/uv/) | [ADK](https://google.github.io/adk-docs/) |
+| 🏗️ **[terraform](skills/terraform/SKILL.md)** | Creates and manages scalable infrastructure through code. It covers modules, testing paradigms, CI/CD pipelines, and infrastructure-as-code security compliance. | [Terraform](https://www.terraform.io/) | [Terraform](https://developer.hashicorp.com/terraform/docs) |
+| 📊 **[d2-diagram](skills/d2-diagram/SKILL.md)** | Generates professional architectural diagrams using the D2 declarative language. It supports sequence diagrams, flowcharts, ERDs, and UML class diagrams. | [D2](https://d2lang.com/), [Go](https://go.dev/) | [D2](https://d2lang.com) |
+| 🕷️ **[skill-crawler](skills/skill-crawler/SKILL.md)** | Converts crawled external documentation directly into usable opencode skills. It works alongside playwright-cli to generate SKILL.md files from extracted web content. | `@playwright/cli` | Internal |
+| 🎭 **[playwright-cli](skills/playwright-cli/SKILL.md)** | Automates browser interactions for comprehensive web testing and data extraction. It enables robust UI verification, form manipulation, and screenshot capture. | `@playwright/cli` | [Playwright](https://playwright.dev) |
+| ⚙️ **[opencode-dev](skills/opencode-dev/SKILL.md)** | Manages OpenCode agents, tools, MCP servers, and comprehensive workflows. It handles the configuration management required for advanced OpenCode development. | `opencode-ai` | [OpenCode](https://opencode.ai) |
+| 🎬 **[charm-vhs](skills/charm-vhs/SKILL.md)** | Writes and edits VHS `.tape` files for creating terminal demo GIFs and videos. Enables automated recording of terminal sessions with precise timing and styling. | [VHS](https://github.com/charmbracelet/vhs), [Go](https://go.dev/) | [VHS](https://github.com/charmbracelet/vhs) |
 
 <br>
 
