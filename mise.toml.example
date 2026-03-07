@@ -1,0 +1,39 @@
+# Mise Configuration Example
+# Copy this file to mise.toml and customize as needed
+# Install mise: https://mise.jdx.dev/
+
+[tools]
+# Core runtime - required for npx skills CLI
+node = "latest"
+
+# D2 Diagram - for generating architectural diagrams
+"go:oss.terrastruct.com/d2" = { version = "latest" }
+
+# VHS - for creating terminal demo recordings
+"go:github.com/charmbracelet/vhs" = { version = "latest" }
+
+# Terraform - for infrastructure as code
+terraform = "latest"
+
+# Python - for ADK and other Python-based skills
+python = "latest"
+uv = "latest"  # Modern Python package manager
+
+# Go - for various Go-based CLI tools used by skills
+go = "latest"
+
+# Required NPM packages for skills
+"npm:@google/gemini-cli" = "nightly"
+"npm:opencode-ai" = "latest"
+"npm:@playwright/cli" = "latest"
+"npm:@googleworkspace/cli" = "latest"
+
+[env]
+# Set your default editor
+EDITOR = "nvim"
+
+# Google Cloud configuration (optional)
+# GOOGLE_CLOUD_PROJECT = "your-project-id"
+
+# OpenCode experimental features
+OPENCODE_ENABLE_EXPERIMENTAL_MODELS = "true"

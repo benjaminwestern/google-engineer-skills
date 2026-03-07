@@ -29,6 +29,35 @@ Or you can install individual skills:
 npx skills add https://github.com/benjaminwestern/google-engineer-skills --skill tech-writer
 ```
 
+### Requirements
+
+These skills require certain CLI tools to be installed on your system. The easiest way to manage these dependencies is using [mise](https://mise.jdx.dev/):
+
+```bash
+# Copy the example configuration
+cp mise.toml.example mise.toml
+
+# Install all required tools
+mise install
+```
+
+**Required Tools Overview:**
+
+| Tool | Purpose | Used By |
+|------|---------|---------|
+| [Node.js](https://nodejs.org/) | Runtime for `npx skills` CLI | All skills |
+| [D2](https://d2lang.com/) | Declarative diagramming | d2-diagram |
+| [VHS](https://github.com/charmbracelet/vhs) | Terminal recording | charm-vhs |
+| [Terraform](https://www.terraform.io/) | Infrastructure as code | terraform, cloud-foundation-fabric |
+| [Python](https://www.python.org/) + [uv](https://docs.astral.sh/uv/) | Python runtime & package manager | google-adk |
+| [Go](https://go.dev/) | Go runtime for CLI tools | d2, vhs |
+
+**NPM Packages (installed via mise):**
+- `@google/gemini-cli` — Gemini CLI integration
+- `opencode-ai` — OpenCode development
+- `@playwright/cli` — Browser automation
+- `@googleworkspace/cli` — Google Workspace integration
+
 ### Managing Skills
 
 | Command | Description |
