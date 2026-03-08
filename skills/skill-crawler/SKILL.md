@@ -1,8 +1,9 @@
 ---
 name: skill-crawler
 version: "1.0.0"
-description: Convert crawled documentation into opencode skills. Use after crawling with playwright-cli to generate SKILL.md files. For skill format details, see opencode-dev.
+description: Convert crawled documentation into usable skills. Use after crawling with playwright-cli to generate SKILL.md files. For skill format details, see opencode-dev.
 metadata:
+  source_url: https://github.com/benjaminwestern/google-engineer-skills
   related_skills:
     - playwright-cli
     - opencode-dev
@@ -16,8 +17,8 @@ Convert crawled documentation into reusable opencode skills.
 
 This skill works **AFTER** you have crawled documentation. See related skills:
 
-- **Crawl docs**: `skill({ name: "playwright-cli" })` - Browser automation and content extraction
-- **Skill format**: `skill({ name: "opencode-dev" })` - YAML frontmatter, structure, and best practices
+- **Crawl docs**: `npx skills add https://github.com/benjaminwestern/google-engineer-skills --skill playwright-cli` - Browser automation and content extraction
+- **Skill format**: `npx skills add https://github.com/benjaminwestern/google-engineer-skills --skill opencode-dev` - YAML frontmatter, structure, and best practices
 
 ## Overview
 
@@ -32,7 +33,7 @@ After crawling documentation with playwright-cli, this skill helps you:
 
 ### Step 1: Crawl documentation
 
-Use playwright-cli to extract documentation (see `skill({ name: "playwright-cli" })` for full commands):
+Use playwright-cli to extract documentation:
 
 ```bash
 playwright-cli open https://docs.example.com --persistent
@@ -52,8 +53,11 @@ Review your snapshot files and identify:
 
 ### Step 3: Create Skill Structure
 
+Create a new directory for your skill following the standard structure:
+
 ```bash
-mkdir -p ~/.config/opencode/skills/<skill-name>
+mkdir -p skills/<skill-name>
+touch skills/<skill-name>/SKILL.md
 ```
 
 ### Step 4: Generate SKILL.md
@@ -99,97 +103,13 @@ description: <1024 char description with "Use when...">
 <Best practices>
 ```
 
-## Skill Templates
+## References
 
-### CLI Tool
+See the `references/` folder for detailed guides:
 
-```markdown
----
-name: <tool>-cli
-description: Automate <tool> for <purpose>. Use when you need to <use cases>.
----
-
-# <Tool> CLI
-
-## Quick Start
-
-```bash
-<tool> --version
-<tool> <basic command>
-```
-
-## Commands
-
-### Core
-
-```bash
-<essential commands>
-```
-
-## Examples
-
-<2-3 practical examples>
-```
-
-### API Service
-
-```markdown
----
-name: <service>-api
-description: Interact with <Service> API for <purpose>. Use when you need to <use cases>.
----
-
-# <Service> API
-
-## Quick Start
-
-```bash
-# Authentication
-<auth example>
-
-# Basic request
-<request example>
-```
-
-## Endpoints
-
-<endpoint examples>
-```
-
-## Content Organization
-
-- **By Functionality**: Core, Management, Utilities
-- **By Workflow**: Setup, Operation, Cleanup
-- **By Frequency**: Common (daily), Advanced (occasional), Rare (edge cases)
-
-## Writing Guidelines
-
-### Description Field
-
-- **Length**: 1-1024 characters
-- **Format**: `<Action>. Use when you need to <use case>`
-- **Example**: "Automates Docker containers for building, running, and deploying. Use when working with Dockerfiles, images, or containerized applications."
-
-### Quick Start Section
-
-- 3-5 most common commands
-- Copy-paste ready
-- Covers 80% of use cases
-
-### Examples
-
-- Real-world scenarios
-- Complete, working commands
-- Progressive complexity
-
-### Best Practices
-
-- ✅ Action-oriented descriptions
-- ✅ Practical, tested examples
-- ✅ Clear category organization
-- ❌ Generic descriptions
-- ❌ Incomplete snippets
-- ❌ Unorganized command lists
+- **[templates.md](references/templates.md)** - Ready-to-use templates for CLI tools and API services
+- **[best-practices.md](references/best-practices.md)** - Writing guidelines, organization strategies, and do's/don'ts
+- **[examples.md](references/examples.md)** - Complete example skills demonstrating best practices
 
 ## Validation Checklist
 
@@ -200,66 +120,6 @@ description: Interact with <Service> API for <purpose>. Use when you need to <us
 - [ ] Examples are complete
 - [ ] Categories are logical
 - [ ] No markdown syntax errors
-
-## Testing
-
-```bash
-# Test the generated skill
-skill({ name: "<skill-name>" })
-
-# Verify it loads without errors
-```
-
-## Skill Naming
-
-- Use lowercase with hyphens: `docker-cli`, `k8s-deploy`
-- Be specific: `aws-s3-cli` not `aws`
-- Match directory name exactly
-
-## Example: Docker Skill
-
-```markdown
----
-name: docker-cli
-description: Automate Docker containers for building, running, and deploying. Use when working with Dockerfiles, images, containers, or Docker Compose.
----
-
-# Docker CLI
-
-## Quick Start
-
-```bash
-docker run -d -p 80:80 nginx
-docker build -t myapp .
-docker compose up -d
-```
-
-## Commands
-
-### Containers
-
-```bash
-docker run -d --name mycontainer nginx
-docker ps
-docker logs mycontainer
-docker stop mycontainer
-docker rm mycontainer
-```
-
-### Images
-
-```bash
-docker build -t myimage .
-docker images
-docker push registry/myimage
-docker pull nginx
-```
-
-## Tips
-
-- Use `--rm` for temporary containers
-- Use `-v` for persistent data
-```
 
 ## Troubleshooting
 
@@ -287,8 +147,5 @@ This skill is part of a documentation-to-skill workflow:
 
 | Skill | Purpose |
 |-------|---------|
-| `skill({ name: "playwright-cli" })` | Crawl and extract documentation from websites |
-| `skill({ name: "skill-crawler" })` | Convert extracted docs into SKILL.md files |
-| `skill({ name: "opencode-dev" })` | Skill format specs, agents, tools, and configuration |
-
-**Skills directory**: `~/.config/opencode/skills/`
+| `npx skills add https://github.com/benjaminwestern/google-engineer-skills --skill playwright-cli` | Crawl and extract documentation from websites |
+| `npx skills add https://github.com/benjaminwestern/google-engineer-skills --skill opencode-dev` | Skill format specs, agents, tools, and configuration |

@@ -3,3 +3,7 @@
 
 # Playwright CLI snapshot YAML files
 *.yaml
+
+.ruff_cache
+.DS_STORE
+.env
