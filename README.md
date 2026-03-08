@@ -69,6 +69,8 @@ All skills require [Node.js](https://nodejs.org/) as the runtime for the `npx sk
 | ⚙️ **[opencode-dev](skills/opencode-dev/SKILL.md)** | Manages OpenCode agents, tools, MCP servers, and comprehensive workflows. It handles the configuration management required for advanced OpenCode development. | `opencode-ai` |
 | 🎬 **[charm-vhs](skills/charm-vhs/SKILL.md)** | Writes and edits VHS `.tape` files for creating terminal demo GIFs and videos. Enables automated recording of terminal sessions with precise timing and styling. | [VHS](https://github.com/charmbracelet/vhs), [Go](https://go.dev/) |
 | 🖥️ **[terminal-ui-engineer](skills/terminal-ui-engineer/SKILL.md)** | Constructs beautiful, highly interactive Terminal UIs using Charmbracelet's Gum. It engineers bulletproof shell scripts with robust dependency management and modern UX aesthetics. | [Gum](https://github.com/charmbracelet/gum) |
+| 🔍 **[jq-tooling](skills/jq-tooling/SKILL.md)** | Query and transform JSON data using jq. Use when parsing JSON files, extracting data from API responses, filtering arrays, and transforming JSON structures in shell scripts. | [jq](https://jqlang.github.io/jq/) |
+| 🔄 **[skill-registry-sync](skills/skill-registry-sync/SKILL.md)** | Synchronise README.md references with installed skills from .skill-lock.json. Keeps external skill registry references in documentation up to date. | - |
 
 <br>
 
@@ -124,6 +126,7 @@ Expand your agent's toolkit with these supplementary skill collections:
 - ⚛️ `npx skills add https://github.com/google-labs-code/stitch-skills --skill react:components`
 - 🛠️ `npx skills add https://github.com/google-gemini/gemini-cli`
 - 🏢 `npx skills add https://github.com/googleworkspace/cli`
+- 📦 `npx skills add https://github.com/vercel-labs/skills`
 
 <br>
 <div align="center">

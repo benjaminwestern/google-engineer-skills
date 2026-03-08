@@ -1,0 +1,5 @@
+# Playwright CLI snapshot files
+.playwright-cli/
+
+# Playwright CLI snapshot YAML files
+*.yaml
