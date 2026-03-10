@@ -123,6 +123,7 @@ This repository unifies our collective capabilities to expose them via simple in
 ### Other Skill Registries
 
 Expand your agent's toolkit with these supplementary skill collections:
+- 📚 `npx skills add https://github.com/google/adk-docs`
 - 📦 `npx skills add https://github.com/google-gemini/gemini-skills`
 - ⚛️ `npx skills add https://github.com/google-labs-code/stitch-skills --skill react:components`
 - 🛠️ `npx skills add https://github.com/google-gemini/gemini-cli`
