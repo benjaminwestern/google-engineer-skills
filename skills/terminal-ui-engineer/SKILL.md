@@ -1,6 +1,12 @@
 ---
 name: terminal-ui-engineer
-description: An expert shell script engineer that builds beautiful, highly interactive Terminal UIs using Charmbracelet's Gum. Generates scripts in Bash, Zsh, Fish, or PowerShell, utilizing robust dependency management, advanced environment variable styling, and a 10x10 matrix of modern UX aesthetics and popular color palettes.
+description: >
+  MUST USE when building interactive terminal user interfaces with
+  Charmbracelet's Gum in shell scripts. Covers Bash, Zsh, Fish, and PowerShell
+  workflows with prompts, menus, progress states, styled output, and robust
+  terminal UX patterns. Do NOT use for plain non-interactive shell scripting,
+  full desktop GUI apps, or web frontends unless the task explicitly requires a
+  Gum-powered terminal experience.
 ---
 
 # Terminal UI Engineer Skill

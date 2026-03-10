@@ -1,7 +1,12 @@
 ---
-name: jq-tooling
+name: jq
 version: "1.0.0"
-description: Query and transform JSON data using jq. Use when parsing JSON files, extracting data from API responses, filtering arrays, transforming JSON structures, or working with JSON in shell scripts.
+description: >
+  MUST USE when parsing, filtering, querying, transforming, or validating JSON
+  with jq. Covers extracting fields from API responses, reshaping JSON
+  documents, filtering arrays and objects, building shell pipelines around JSON,
+  and composing jq expressions. Do NOT use for YAML processing, SQL queries, or
+  general text manipulation unless jq is explicitly part of the task.
 metadata:
   source_url: https://github.com/jqlang/jq
   docs_url: https://jqlang.github.io/jq/manual/

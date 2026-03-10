@@ -1,7 +1,12 @@
 ---
 name: terraform
 version: "1.0.0"
-description: Create and manage infrastructure with Terraform. Use for creating modules, writing tests, setting up CI/CD pipelines, reviewing configurations, and making infrastructure-as-code architecture decisions.
+description: >
+  MUST USE when creating, reviewing, testing, or refactoring Terraform code.
+  Covers modules, providers, resources, variables, CI/CD workflows, policy and
+  validation patterns, and infrastructure-as-code design decisions. Do NOT use
+  for imperative cloud CLI tasks or non-Terraform deployment tooling unless the
+  task explicitly requires Terraform.
 metadata:
   source_url: https://github.com/hashicorp/terraform
   docs_url: https://developer.hashicorp.com/terraform/docs

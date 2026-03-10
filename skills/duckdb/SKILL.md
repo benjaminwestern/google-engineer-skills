@@ -1,6 +1,12 @@
 ---
 name: duckdb
-description: Use DuckDB for analytical data processing, SQL queries, and data import/export. Use when working with CSV, Parquet, JSON files, running SQL analytics, or building data pipelines with embedded analytics database.
+description: >
+  MUST USE when querying, transforming, or analysing local and embedded data
+  with DuckDB. Covers SQL analytics over CSV, Parquet, and JSON files, data
+  import and export workflows, ad hoc exploration, and embedded analytical
+  database usage in scripts or pipelines. Do NOT use for transactional OLTP
+  database design, external warehouse administration, or generic SQL work that
+  does not specifically involve DuckDB.
 ---
 
 # DuckDB

@@ -1,7 +1,12 @@
 ---
-name: d2-diagram
+name: d2
 version: "1.1.0"
-description: Create professional diagrams using D2 declarative diagramming language. Use for sequence diagrams, flowcharts, architecture diagrams, ERDs, UML class diagrams, or grid-based diagrams.
+description: >
+  MUST USE when creating or editing diagrams in D2. Covers sequence diagrams,
+  flowcharts, architecture diagrams, ERDs, UML class diagrams, grid layouts,
+  and other text-defined diagrams rendered with D2 syntax. Do NOT use for
+  Mermaid, PlantUML, draw.io, or image-editing tasks unless the user explicitly
+  wants D2 output.
 metadata:
   source_url: https://github.com/terrastruct/d2
   docs_url: https://d2lang.com

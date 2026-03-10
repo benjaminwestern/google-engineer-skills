@@ -1,7 +1,13 @@
 ---
 name: cloud-foundation-fabric
 version: "1.0.0"
-description: Build Google Cloud resources using Cloud Foundation Fabric Terraform modules. Use when creating, configuring, or managing GCP infrastructure using CFF modules with proper versioning and best practices.
+description: >
+  MUST USE when building or modifying Google Cloud infrastructure with Cloud
+  Foundation Fabric Terraform modules. Covers selecting CFF modules, wiring
+  inputs and outputs, applying versioning and repository conventions, and
+  composing Google Cloud architectures on top of Fabric. Do NOT use for generic
+  Terraform work outside Cloud Foundation Fabric or for manual Google Cloud
+  console setup unless the task explicitly depends on CFF.
 metadata:
   source_url: https://github.com/GoogleCloudPlatform/cloud-foundation-fabric
   docs_url: https://github.com/GoogleCloudPlatform/cloud-foundation-fabric/blob/master/README.md

@@ -1,6 +1,12 @@
 ---
 name: charm-vhs
-description: Writing and editing VHS `.tape` files for terminal demo GIFs
+description: >
+  MUST USE when writing, editing, or debugging Charmbracelet VHS `.tape` files
+  for terminal demos. Covers scripted terminal recordings, timing, typing,
+  screen layout, and producing GIF, MP4, or WebM demos from VHS tapes. Do NOT
+  use for general shell scripting, live terminal automation without VHS, or
+  browser and GUI recording tasks unless the output is a VHS-driven terminal
+  demo.
 ---
 
 # VHS Tape Files

@@ -1,7 +1,12 @@
 ---
 name: playwright-cli
 version: "1.0.0"
-description: Automate browser interactions for web testing, form filling, screenshots, and data extraction. Use when navigating websites, interacting with web pages, filling forms, taking screenshots, testing web applications, or extracting information from web pages.
+description: >
+  MUST USE when automating a browser with Playwright for navigation, form
+  filling, screenshots, end-to-end testing, or structured data extraction from
+  web pages. Covers scripted interaction with websites, UI verification, and
+  repeatable browser workflows. Do NOT use for static HTTP fetching, API-only
+  testing, or non-browser automation unless a real browser session is required.
 metadata:
   source_url: https://github.com/microsoft/playwright
   docs_url: https://playwright.dev
