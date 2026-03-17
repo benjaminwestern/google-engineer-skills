@@ -131,6 +131,8 @@ Expand your agent's toolkit with these supplementary skill collections:
 - ⚛️ `npx skills add https://github.com/google-labs-code/stitch-skills --skill react:components`
 - 🛠️ `npx skills add https://github.com/google-gemini/gemini-cli`
 - 🏢 `npx skills add https://github.com/googleworkspace/cli`
+- ✍️ `npx skills add https://github.com/blader/humanizer`
+- 🎨 `npx skills add https://github.com/leonxlnx/taste-skill`
 - 📦 `npx skills add https://github.com/vercel-labs/skills`
 
 <br>
