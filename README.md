@@ -72,6 +72,7 @@ All skills require [Node.js](https://nodejs.org/) as the runtime for the `npx sk
 | 🎬 **[charm-vhs](skills/charm-vhs/SKILL.md)** | Writes and edits VHS `.tape` files for creating terminal demo GIFs and videos. Enables automated recording of terminal sessions with precise timing and styling. | [VHS](https://github.com/charmbracelet/vhs), [Go](https://go.dev/) |
 | 🖥️ **[terminal-ui-engineer](skills/terminal-ui-engineer/SKILL.md)** | Constructs beautiful, highly interactive Terminal UIs using Charmbracelet's Gum. It engineers bulletproof shell scripts with robust dependency management and modern UX aesthetics. | [Gum](https://github.com/charmbracelet/gum) |
 | 🔍 **[jq](skills/jq/SKILL.md)** | Query and transform JSON data using jq. Use when parsing JSON files, extracting data from API responses, filtering arrays, and transforming JSON structures in shell scripts. | [jq](https://jqlang.github.io/jq/) |
+| 🌳 **[worktrunk](skills/worktrunk/SKILL.md)** | Manages git worktrees with worktrunk (wt) for parallel AI agent workflows. Covers worktree creation, switching, merging, hooks, path templates, and configuration. | [worktrunk](https://github.com/max-sixty/worktrunk) |
 | 🔄 **[skill-registry-sync](skills/skill-registry-sync/SKILL.md)** | Synchronise README.md references with installed skills from .skill-lock.json. Keeps external skill registry references in documentation up to date. | - |
 
 <br>
