@@ -72,7 +72,7 @@ All skills require [Node.js](https://nodejs.org/) as the runtime for the `npx sk
 | 🎬 **[charm-vhs](skills/charm-vhs/SKILL.md)** | Writes and edits VHS `.tape` files for creating terminal demo GIFs and videos. Enables automated recording of terminal sessions with precise timing and styling. | [VHS](https://github.com/charmbracelet/vhs), [Go](https://go.dev/) |
 | 🖥️ **[terminal-ui-engineer](skills/terminal-ui-engineer/SKILL.md)** | Constructs beautiful, highly interactive Terminal UIs using Charmbracelet's Gum. It engineers bulletproof shell scripts with robust dependency management and modern UX aesthetics. | [Gum](https://github.com/charmbracelet/gum) |
 | 🔍 **[jq](skills/jq/SKILL.md)** | Query and transform JSON data using jq. Use when parsing JSON files, extracting data from API responses, filtering arrays, and transforming JSON structures in shell scripts. | [jq](https://jqlang.github.io/jq/) |
-| 🌳 **[worktrunk](skills/worktrunk/SKILL.md)** | Manages git worktrees with worktrunk (wt) for parallel AI agent workflows. Covers worktree creation, switching, merging, hooks, path templates, and configuration. | [worktrunk](https://github.com/max-sixty/worktrunk) |
+| 🌳 **[worktrunk](skills/worktrunk/SKILL.md)** | Manages git worktrees with worktrunk (`wt`) for parallel AI agent workflows. Covers worktree creation, switching, merge discipline, sub-agent prompt scaffolding, and cleanup. | [worktrunk](https://github.com/max-sixty/worktrunk) |
 | 🔄 **[skill-registry-sync](skills/skill-registry-sync/SKILL.md)** | Synchronise README.md references with installed skills from .skill-lock.json. Keeps external skill registry references in documentation up to date. | - |
 
 <br>
@@ -135,6 +135,32 @@ Expand your agent's toolkit with these supplementary skill collections:
 - ✍️ `npx skills add https://github.com/blader/humanizer`
 - 🎨 `npx skills add https://github.com/leonxlnx/taste-skill`
 - 📦 `npx skills add https://github.com/vercel-labs/skills`
+
+<img src="assets/header-references.svg" alt="Troubleshooting" />
+
+### Claude Code Skill Discovery
+
+Claude Code discovers skills at `.claude/skills/` within any directory added via `additionalDirectories` in `settings.json`. If your skills are stored at a top-level `skills/` directory (as per the agentskills standard), Claude Code will **not** find them automatically.
+
+**Fix:** Create a symlink inside your skills directory so Claude Code's discovery convention maps to the existing structure:
+
+```bash
+# From your skills root (e.g. ~/.agents/)
+mkdir -p .claude
+ln -sfn ../skills .claude/skills
+```
+
+Then add the directory to your Claude Code settings (`~/.claude/settings.json`):
+
+```json
+{
+  "additionalDirectories": [
+    "~/.agents"
+  ]
+}
+```
+
+This avoids duplicating or restructuring your existing skills — Claude Code follows the symlink to the same `skills/<name>/SKILL.md` files used by other tools.
 
 <br>
 <div align="center">
