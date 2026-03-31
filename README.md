@@ -6,19 +6,35 @@
 
 <img src="assets/header-overview.svg" alt="Overview" />
 
-This repository centralises high-leverage AI agent skills and tooling for Google Cloud Engineers, accelerating infrastructure delivery and ensuring architectural rigour. By establishing a unified collection of modular, production-tested agent capabilities, engineering teams can eliminate repetitive tasks, enforce security compliance, and standardise deployment practices.
+This repository centralises high-leverage AI agent skills and tooling for
+Google Cloud Engineers, accelerating infrastructure delivery and ensuring
+architectural rigour. By establishing a unified collection of modular,
+production-tested agent capabilities, engineering teams can eliminate
+repetitive tasks, enforce security compliance, and standardise deployment
+practices.
 
 The value proposition is built upon three foundational pillars:
 
-- 🚀 **Immediate Velocity** — Engineers can bypass the scaffolding phase by leveraging pre-built, domain-specific agent skills that instantly hook into standard workflows. This reduces time-to-market for complex infrastructural deployments.
-- 🛡️ **Enforced Standardisation** — Curated skills ensure that code generation, Terraform modules, and architectural designs adhere strictly to Google Cloud best practices. This minimises the risk of misconfigurations and security vulnerabilities.
-- 🧩 **Extensible Ecosystem** — The repository serves as a scalable foundation where new capabilities can be seamlessly integrated and distributed. This prevents silos and empowers cross-functional teams to share high-quality technical assets.
+- 🚀 **Immediate Velocity** — Engineers can bypass the scaffolding phase by
+  leveraging pre-built, domain-specific agent skills that instantly hook into
+  standard workflows. This reduces time-to-market for complex infrastructural
+  deployments.
+- 🛡️ **Enforced Standardisation** — Curated skills ensure that code
+  generation, Terraform modules, and architectural designs adhere strictly to
+  Google Cloud best practices. This minimises the risk of misconfigurations and
+  security vulnerabilities.
+- 🧩 **Extensible Ecosystem** — The repository serves as a scalable foundation
+  where new capabilities can be seamlessly integrated and distributed. This
+  prevents silos and empowers cross-functional teams to share high-quality
+  technical assets.
 
 <br>
 
 <img src="assets/header-quickstart.svg" alt="Quick Start" />
 
-To begin using these tools immediately, add the required skills to your local environment using the CLI. You can pull them down in seconds and start extending your agent's capabilities.
+To begin using these tools immediately, add the required skills to your local
+environment using the CLI. You can pull them down in seconds and start
+extending your agent's capabilities.
 
 ```bash
 # Add all skills from this repository
@@ -33,7 +49,9 @@ npx skills add https://github.com/benjaminwestern/google-engineer-skills --skill
 
 <img src="assets/header-requirements.svg" alt="Requirements" />
 
-These skills require certain CLI tools to be installed on your system. The easiest way to manage these dependencies is using [mise](https://mise.jdx.dev/):
+These skills require certain CLI tools to be installed on your system. The
+easiest way to manage these dependencies is using
+[mise](https://mise.jdx.dev/):
 
 ```bash
 # Copy the example configuration
@@ -43,7 +61,10 @@ cp mise.toml.example mise.toml
 mise up
 ```
 
-All skills require [Node.js](https://nodejs.org/) as the runtime for the `npx skills` CLI. Additional global NPM packages like `@google/gemini-cli`, `opencode-ai`, `@playwright/cli`, or `@googleworkspace/cli` may be required by specific skills and are managed automatically via `mise`.
+All skills require [Node.js](https://nodejs.org/) as the runtime for the
+`npx skills` CLI. Additional global NPM packages like `@google/gemini-cli`,
+`opencode-ai`, `@playwright/cli`, or `@googleworkspace/cli` may be required by
+specific skills and are managed automatically via `mise`.
 
 ### Managing Skills
 
@@ -81,11 +102,14 @@ All skills require [Node.js](https://nodejs.org/) as the runtime for the `npx sk
 
 ### Deep Modules, Simple Interfaces
 
-We ruthlessly hide implementation chaos and present clean, intuitive boundaries. Every skill must expose a simple interface while managing significant internal complexity.
+We ruthlessly hide implementation chaos and present clean, intuitive
+boundaries. Every skill must expose a simple interface while managing
+significant internal complexity.
 
 ### Standardised File Structure
 
-Each skill must adhere to a strict, predictable directory structure to ensure compatibility and ease of discovery.
+Each skill must adhere to a strict, predictable directory structure to ensure
+compatibility and ease of discovery.
 
 ```text
 skills/
@@ -98,7 +122,8 @@ skills/
 
 ### The SKILL.md Contract
 
-Every `SKILL.md` file must include specific YAML frontmatter. This ensures the parsing engine can properly categorise and index the capability.
+Every `SKILL.md` file must include specific YAML frontmatter. This ensures the
+parsing engine can properly categorise and index the capability.
 
 ```yaml
 ---
@@ -114,7 +139,8 @@ metadata:
 
 <img src="assets/header-references.svg" alt="References" />
 
-This repository unifies our collective capabilities to expose them via simple interfaces.
+This repository unifies our collective capabilities to expose them via simple
+interfaces.
 
 ### Skills Standard
 
@@ -137,30 +163,6 @@ Expand your agent's toolkit with these supplementary skill collections:
 - 📦 `npx skills add https://github.com/vercel-labs/skills`
 
 <img src="assets/header-references.svg" alt="Troubleshooting" />
-
-### Claude Code Skill Discovery
-
-Claude Code discovers skills at `.claude/skills/` within any directory added via `additionalDirectories` in `settings.json`. If your skills are stored at a top-level `skills/` directory (as per the agentskills standard), Claude Code will **not** find them automatically.
-
-**Fix:** Create a symlink inside your skills directory so Claude Code's discovery convention maps to the existing structure:
-
-```bash
-# From your skills root (e.g. ~/.agents/)
-mkdir -p .claude
-ln -sfn ../skills .claude/skills
-```
-
-Then add the directory to your Claude Code settings (`~/.claude/settings.json`):
-
-```json
-{
-  "additionalDirectories": [
-    "~/.agents"
-  ]
-}
-```
-
-This avoids duplicating or restructuring your existing skills — Claude Code follows the symlink to the same `skills/<name>/SKILL.md` files used by other tools.
 
 <br>
 <div align="center">
