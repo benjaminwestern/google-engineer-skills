@@ -82,6 +82,7 @@ specific skills and are managed automatically via `mise`.
 | Skill | Description | Required Tools |
 |-------|-------------|----------------|
 | ✍️ **[tech-writer](skills/tech-writer/SKILL.md)** | Produces rigorous, persuasive technical documentation and solution designs. It enforces British English, the Pyramid Principle, and visual markdown generation for high-impact communication. | - |
+| 📝 **[writing](skills/writing/SKILL.md)** | Writes clear, dense technical documents (READMEs, ADRs, design docs, blogs, guides, runbooks, RFCs) in a consistent house voice. It offers per-type skeletons without mandating structure, and enforces strict prose rules that keep output human-sounding rather than templated. | - |
 | 🎨 **[github-profile-architect](skills/github-profile-architect/SKILL.md)** | Constructs breathtaking, highly personalised digital magazines and documentation layouts. It leverages dynamic SVGs, Bento Box aesthetics, and strict colour palettes. | - |
 | ☁️ **[cloud-foundation-fabric](skills/cloud-foundation-fabric/SKILL.md)** | Builds Google Cloud resources using Cloud Foundation Fabric Terraform modules. It provides production-ready modules for GCP infrastructure with proper versioning constraints. | [Terraform](https://www.terraform.io/) |
 | 🏗️ **[terraform](skills/terraform/SKILL.md)** | Creates and manages scalable infrastructure through code. It covers modules, testing paradigms, CI/CD pipelines, and infrastructure-as-code security compliance. | [Terraform](https://www.terraform.io/) |
